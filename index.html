@@ -1,110 +1,59 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Paint with the mouse !</title>
-        <style>
-            #myCanvas {
-                border: 1px solid black;
-            }
-        </style>
-        
-    </head>
-    <body>
-        <p> This example shows how to paint in a canvas, with a "pencil"... The path that is drawn is made of several contiguous lines. Each line is drawn in "immediate" mode. There is no animation loop in there as we must not clear the canvas like in an animation loop. We draw only when the mouse moved.</p>
-        <canvas id="myCanvas" width="800" height="800">
-        </canvas>
-        <script>
-            
-        </script>
-    <script id="jsbin-javascript">
-var canvas = document.getElementById('myCanvas');
-if (canvas.getContext) 
- {
-  var ctx = canvas.getContext("2d");
-     for (i = 2; i < 800; i += 398) 
-	     {
-		   ctx.moveTo(0, i);
-		   ctx.lineTo(canvas.width, i);
-		   ctx.stroke();
-		  }
-     for (i = 2; i <800; i += 398) 
-	     {
-		   ctx.moveTo(i, 0);
-		   ctx.lineTo(i,canvas.height);
-		   ctx.stroke();
-		  }
-  } 
-  ctx.lineWidth=10;
-  ctx.moveTo(150, 100);
-  ctx.lineTo(150, 300);
-  ctx.stroke();
-
-  ctx.moveTo(500, 100);
-  ctx.lineTo(500, 300);
-  ctx.stroke();
-  ctx.moveTo(700, 100);
-  ctx.lineTo(700, 300);
-  ctx.stroke();
-
-  ctx.moveTo(150, 500);
-  ctx.lineTo(150, 700);
-  ctx.stroke();
-  ctx.moveTo(350, 500);
-  ctx.lineTo(350, 750);
-  ctx.stroke();
-
-
-  ctx.moveTo(500, 500);
-  ctx.lineTo(500, 700);
-  ctx.stroke();
-  ctx.moveTo(550, 700);
-  ctx.lineTo(750, 700);
-  ctx.stroke();
-</script>
-
-
-
-<script id="jsbin-source-javascript" type="text/javascript">var canvas = document.getElementById('myCanvas');
-if (canvas.getContext) 
- {
-  var ctx = canvas.getContext("2d");
-     for (i = 2; i < 800; i += 398) 
-	     {
-		   ctx.moveTo(0, i);
-		   ctx.lineTo(canvas.width, i);
-		   ctx.stroke();
-		  }
-     for (i = 2; i <800; i += 398) 
-	     {
-		   ctx.moveTo(i, 0);
-		   ctx.lineTo(i,canvas.height);
-		   ctx.stroke();
-		  }
-  } 
-  ctx.lineWidth=10;
-  ctx.moveTo(150, 100);
-  ctx.lineTo(150, 300);
-  ctx.stroke();
-
-  ctx.moveTo(500, 100);
-  ctx.lineTo(500, 300);
-  ctx.stroke();
-  ctx.moveTo(700, 100);
-  ctx.lineTo(700, 300);
-  ctx.stroke();
-
-  ctx.moveTo(150, 500);
-  ctx.lineTo(150, 700);
-  ctx.stroke();
-  ctx.moveTo(350, 500);
-  ctx.lineTo(350, 750);
-  ctx.stroke();
-
-
-  ctx.moveTo(500, 500);
-  ctx.lineTo(500, 700);
-  ctx.stroke();
-  ctx.moveTo(550, 700);
-  ctx.lineTo(750, 700);
-  ctx.stroke();</script></body>
+  <head>
+    <title>Paint with the mouse !</title>
+    <style>
+      #myCanvas {
+      border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <p> This example shows how to paint in a canvas, with a "pencil"... The path that is drawn is made of several contiguous lines. Each line is drawn in "immediate" mode. There is no animation loop in there as we must not clear the canvas like in an animation loop. We draw only when the mouse moved.</p>
+    <canvas id="myCanvas" width="800" height="800">
+    </canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      if (canvas.getContext) 
+       {
+        var ctx = canvas.getContext("2d");
+           for (i = 2; i < 800; i += 398) 
+      	     {
+      		   ctx.moveTo(0, i);
+      		   ctx.lineTo(canvas.width, i);
+      		   ctx.stroke();
+      		  }
+           for (i = 2; i <800; i += 398) 
+      	     {
+      		   ctx.moveTo(i, 0);
+      		   ctx.lineTo(i,canvas.height);
+      		   ctx.stroke();
+      		  }
+        } 
+        ctx.fillStyle = "#9fc";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.lineWidth=10;
+        ctx.moveTo(150, 100);
+        ctx.lineTo(150, 300);
+        ctx.stroke();
+        ctx.moveTo(500, 100);
+        ctx.lineTo(500, 300);
+        ctx.stroke();
+        ctx.moveTo(700, 150);
+        ctx.lineTo(700, 300);
+        ctx.stroke();
+        ctx.moveTo(150, 500);
+        ctx.lineTo(150, 700);
+        ctx.stroke();
+        ctx.moveTo(300, 500);
+        ctx.lineTo(300, 700);
+        ctx.stroke();
+        ctx.moveTo(500, 500);
+        ctx.lineTo(500, 700);
+        ctx.stroke();
+        ctx.moveTo(550, 650);
+        ctx.lineTo(750, 650);
+        ctx.stroke();
+    </script>
+  </body>
 </html>
